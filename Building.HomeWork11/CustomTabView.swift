@@ -87,39 +87,7 @@ struct TabBarButton: View {
     }
 }
 
-// Placeholder views for other tabs
-struct WalletView: View {
-    var body: some View {
-        VStack {
-            Text("Wallet View")
-                .font(.title)
-            Text("Your wallet content here")
-                .foregroundColor(.gray)
-        }
-    }
-}
 
-struct StatsView: View {
-    var body: some View {
-        VStack {
-            Text("Statistics View")
-                .font(.title)
-            Text("Your stats content here")
-                .foregroundColor(.gray)
-        }
-    }
-}
-
-struct ProfileView: View {
-    var body: some View {
-        VStack {
-            Text("Profile View")
-                .font(.title)
-            Text("Your profile content here")
-                .foregroundColor(.gray)
-        }
-    }
-}
 
 #Preview {
     CustomTabView()

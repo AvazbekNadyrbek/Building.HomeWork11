@@ -29,6 +29,7 @@ struct ContentView: View {
                                     WidgetView(item: widget)
                                 }
                             }
+                            TransaktionView()
                         }
                         
                     }
@@ -36,53 +37,9 @@ struct ContentView: View {
                 .padding(.horizontal, 15)
             }
             .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .topBarLeading) {
-                    Button("Menu", systemImage: "line.horizontal.3") {
-                        
-                    }
-                }
-                ToolbarSpacer(.fixed, placement: .topBarLeading)
-                ToolbarItem(placement: .topBarLeading) {
-                    Button("Settings", systemImage: "gearshape") {
-                        
-                    }
-                }
-                
-                ToolbarItemGroup(placement: .topBarTrailing) {
-                    Button("Edit", systemImage: "pencil") {
-                        
-                    }
-                    .tint(.blue)
-                    Button("Edit", systemImage: "eraser") {
-                        
-                    }
-                    
-                }
-                ToolbarSpacer(.fixed, placement: .topBarTrailing)
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button("info", systemImage: "info") {
-                        
-                    }
-                }
-                
-                ToolbarItemGroup(placement: .bottomBar) {
-                    Button("New", systemImage: "plus") {
-                        
-                    }
-                    Button("Save", systemImage: "square.and.arrow.down") {
-                        
-                    }
-                }
-                ToolbarSpacer(placement: .bottomBar)
-                ToolbarItem(placement: .bottomBar) {
-                    Button("Delete", systemImage: "trash") {
-                        
-                    }
-
-                }
-                
-            }
+            
+            
+            
         }
     }
 }

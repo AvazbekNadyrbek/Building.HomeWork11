@@ -23,6 +23,7 @@ struct WidgetView: View {
                     print(item.price)
                 } label: {
                     Image(systemName: "ellipsis")
+                        .foregroundStyle(.black)
                 }
             }
             

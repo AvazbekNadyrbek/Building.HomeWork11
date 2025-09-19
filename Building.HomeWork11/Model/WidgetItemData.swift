@@ -7,12 +7,24 @@
 
 import SwiftUI
 
-struct WidgetItemData: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+struct WidgetItemData: Identifiable, Hashable {
+    
+    var id: UUID = UUID()
+    var title: String
+    var price: String
+    var percent: String
+    var description: String
+    var type: WidgetType
+    
+    enum WidgetType: String, Codable {
+        case possitive
+        case negative
     }
-}
-
-#Preview {
-    WidgetItemData()
+    
+    static func mockData() -> [WidgetItemData] {
+        [
+            WidgetItemData(title: "Not Income", price: "193.000", percent: "+35%", description: "from this month", type: .possitive),
+            WidgetItemData(title: "Total Result", price: "32.000", percent: "-24%", description: "from this month", type: .negative),
+        ]
+    }
 }

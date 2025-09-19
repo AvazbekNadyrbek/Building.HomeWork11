@@ -9,7 +9,19 @@ import SwiftUI
 
 struct TabbarView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView {
+            LazyVStack {
+                ForEach(0..<100) { i in
+                   Text("View \(i)")
+                        .padding(.vertical)
+                        .onAppear {
+                            print("Víew \(i) appeared")
+                        }
+                }
+            }
+            Image(systemName: "xmark")
+        }
+        .background(.blue)
     }
 }
 

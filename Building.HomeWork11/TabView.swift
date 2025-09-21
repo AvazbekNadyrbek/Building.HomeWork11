@@ -38,20 +38,6 @@ struct MainTabView: View {
     }
 }
 
-// Simple placeholder views
-struct WalletView: View {
-    var body: some View {
-        NavigationView {
-            VStack {
-                Text("Wallet View")
-                    .font(.title)
-                Text("Your wallet content here")
-                    .foregroundColor(.gray)
-            }
-            .navigationTitle("Wallet")
-        }
-    }
-}
 
 struct StatsView: View {
     var body: some View {
